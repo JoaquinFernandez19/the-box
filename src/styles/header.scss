@@ -1,0 +1,51 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	font-family: 'Pacifico', Arial, sans-serif;
+	h2 {
+		font-weight: 300;
+		color: white;
+	}
+	.new-project-btn {
+		cursor: pointer;
+		position: absolute;
+		font-weight: 200;
+		left: 1em;
+		bottom: 0;
+		padding: 0 20px 5px 20px;
+		border-radius: 20px 20px 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #2d767f;
+		color: white;
+		font-size: 1.4em;
+		transition: 200ms linear;
+		&:hover {
+			background-color: #ecfffb;
+			color: #1e6262;
+		}
+		.add-icon {
+			margin: 5px 0 0 5px;
+			font-size: 1.5em;
+			pointer-events: none;
+		}
+	}
+	.active {
+		background-color: #ecfffb;
+		color: #1e6262;
+	}
+}
+
+@media (max-width: 1014px) {
+	.header {
+		justify-content: space-evenly;
+		padding-right: 2em;
+		.new-project-btn {
+			position: relative;
+			top: 3px;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@mixin eachColumn() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	grid-row: 1/3;
+}
+
+.todoList {
+	display: grid;
+	padding-top: 2em;
+	position: relative;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 20px 1fr;
+	font-family: roboto, Arial, sans-serif;
+	.toDo {
+		@include eachColumn();
+		border-right: 1px solid rgb(160, 157, 157);
+	}
+	.doing {
+		@include eachColumn();
+		border-right: 1px solid rgb(160, 157, 157);
+	}
+	.finished {
+		@include eachColumn();
+	}
+	.start-title {
+		grid-row: 1/3;
+		grid-column: 1/4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		h1 {
+			font-size: 4em;
+			color: #2d757fa6;
+		}
+	}
+}
+
+@media (max-width: 1014px) {
+	.todoList {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

@@ -1,8 +1,14 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 //Reducers!
+export const workingStateReducer = (working = false, action) => {
+	if (action.type === 'START_PROJECT') {
+		return (working = true);
+	}
+	return working;
+};
 
 //
 export default combineReducers({
-  replaceMe: "hola putos",
+	working: workingStateReducer,
 });
