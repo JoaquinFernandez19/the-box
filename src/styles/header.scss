@@ -12,9 +12,9 @@
 		cursor: pointer;
 		position: absolute;
 		font-weight: 200;
-		left: 1em;
+		left: 4em;
 		bottom: 0;
-		padding: 0 20px 5px 20px;
+		padding: 0 20px 0px 20px;
 		border-radius: 20px 20px 0 0;
 		display: flex;
 		align-items: center;
@@ -28,8 +28,8 @@
 			color: #1e6262;
 		}
 		.add-icon {
-			margin: 5px 0 0 5px;
-			font-size: 1.5em;
+			margin: 0px 0 0 5px;
+			font-size: 1em;
 			pointer-events: none;
 		}
 	}
@@ -46,6 +46,21 @@
 		.new-project-btn {
 			position: relative;
 			top: 3px;
+			left: 0;
+			padding: 0px 12px 2px 12px;
+			margin-bottom: 3px;
+			align-self: flex-end;
+			&:hover {
+				background-color: #b4f1f1;
+				color: black;
+			}
+			.add-icon {
+				margin: 2px 0 0 2px;
+			}
+		}
+		.active {
+			background-color: #b4f1f1;
+			color: black;
 		}
 	}
 }

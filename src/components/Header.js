@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/header.scss';
-import { RiFolderAddLine } from 'react-icons/ri';
+import { FaTasks } from 'react-icons/fa';
+import { IoMdCheckboxOutline } from 'react-icons/io';
 //redux
 import { connect } from 'react-redux';
 import { startProject } from '../actions';
@@ -14,8 +15,8 @@ const Header = (props) => {
 		return (
 			<div className="header">
 				<div className="new-project-btn active" onClick={handleStartProject}>
-					<p>New project</p>
-					<RiFolderAddLine className="add-icon" />
+					<p>Start</p>
+					<FaTasks className="add-icon" />
 				</div>
 				<h2>The Box</h2>
 			</div>
@@ -24,8 +25,8 @@ const Header = (props) => {
 	return (
 		<div className="header">
 			<div className="new-project-btn" onClick={handleStartProject}>
-				<p>New project</p>
-				<RiFolderAddLine className="add-icon" />
+				<p>Start</p>
+				<IoMdCheckboxOutline className="add-icon" />
 			</div>
 			<h2>The Box</h2>
 		</div>

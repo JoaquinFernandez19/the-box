@@ -1,28 +1,34 @@
 import React from 'react';
 import '../styles/todoList.scss';
 import { connect } from 'react-redux';
+//icons
+import { BsPlus } from 'react-icons/bs';
 ///
 const TodoList = (props) => {
 	if (props.working) {
 		return (
 			<div className="todoList animated fadeIn">
 				<div className="toDo">
-					<h2>Tareas pendientes</h2>
+					<h4>Tareas pendientes</h4>
+					<div className="todo-column"></div>
+					<span className="add-todo">
+						<BsPlus />
+						Add a pending task
+					</span>
 				</div>
 				<div className="doing">
-					<h2>En proceso</h2>
+					<h4>En proceso</h4>
 				</div>
 				<div className="finished">
-					<h2>Tareas terminadas</h2>
+					<h4>Tareas terminadas</h4>
 				</div>
 			</div>
 		);
 	}
 	return (
-		<div className="todoList">
-			<div className="start-title">
-				<h1>First create a new project!</h1>
-			</div>
+		<div className="start-title">
+			<h1>A task manager</h1>
+			<p>A click away of becoming organized (for free)</p>
 		</div>
 	);
 };
