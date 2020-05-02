@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/the-box/static/css/main.f82aa52e.chunk.css",
+    "main.css": "/the-box/static/css/main.8a50bd59.chunk.css",
     "main.js": "/the-box/static/js/main.f401d298.chunk.js",
     "main.js.map": "/the-box/static/js/main.f401d298.chunk.js.map",
     "runtime-main.js": "/the-box/static/js/runtime-main.4da536a8.js",
@@ -8,15 +8,15 @@
     "static/js/2.dc9d025d.chunk.js": "/the-box/static/js/2.dc9d025d.chunk.js",
     "static/js/2.dc9d025d.chunk.js.map": "/the-box/static/js/2.dc9d025d.chunk.js.map",
     "index.html": "/the-box/index.html",
-    "precache-manifest.3f3676fc2db57020a35d52247ab0d7d2.js": "/the-box/precache-manifest.3f3676fc2db57020a35d52247ab0d7d2.js",
+    "precache-manifest.688ada470723a164f3ee158eab16df35.js": "/the-box/precache-manifest.688ada470723a164f3ee158eab16df35.js",
     "service-worker.js": "/the-box/service-worker.js",
-    "static/css/main.f82aa52e.chunk.css.map": "/the-box/static/css/main.f82aa52e.chunk.css.map",
+    "static/css/main.8a50bd59.chunk.css.map": "/the-box/static/css/main.8a50bd59.chunk.css.map",
     "static/js/2.dc9d025d.chunk.js.LICENSE.txt": "/the-box/static/js/2.dc9d025d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4da536a8.js",
     "static/js/2.dc9d025d.chunk.js",
-    "static/css/main.f82aa52e.chunk.css",
+    "static/css/main.8a50bd59.chunk.css",
     "static/js/main.f401d298.chunk.js"
   ]
 }
