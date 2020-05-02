@@ -35,6 +35,7 @@ body {
 	.app-container {
 		grid-template-columns: 1fr;
 		grid-template-rows: 50px 60px 1fr;
+
 		.header {
 			grid-row: 1/2;
 			grid-column: auto;
@@ -42,6 +43,17 @@ body {
 		.todoList {
 			grid-row: 3/4;
 			grid-column: auto;
+		}
+		.start-title {
+			grid-row: 3/4;
+			grid-column: auto;
+			h1 {
+				line-height: 50px;
+			}
+			padding: 30px;
+			p {
+				padding-top: 20px;
+			}
 		}
 		.tools {
 			grid-row: 2/3;
