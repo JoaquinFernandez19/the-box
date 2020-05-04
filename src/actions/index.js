@@ -5,12 +5,9 @@ export const startProject = () => {
 		type: 'START_PROJECT',
 	};
 };
-export const deleteProject = (projectName) => {
+export const resetProject = () => {
 	return {
-		type: 'DELETE_PROJECT',
-		payload: {
-			projectName: projectName,
-		},
+		type: 'RESET_PROJECT',
 	};
 };
 export const changeProjectName = (oldProjectName, newProjectName) => {
@@ -20,6 +17,17 @@ export const changeProjectName = (oldProjectName, newProjectName) => {
 			oldProjectName: oldProjectName,
 			newProjectName: newProjectName,
 		},
+	};
+};
+
+export const creatingNewTodo = () => {
+	return {
+		type: 'CREATING_TODO',
+	};
+};
+export const cancelCreatingTodo = () => {
+	return {
+		type: 'CANCEL_CREATING_TODO',
 	};
 };
 
@@ -49,11 +57,11 @@ export const moveTodoToFinish = (task) => {
 		},
 	};
 };
-export const deleteTodo = (task) => {
+export const deleteTodo = (taskId) => {
 	return {
 		type: 'DELETE_TODO',
 		payload: {
-			task: task,
+			taskId: taskId,
 		},
 	};
 };

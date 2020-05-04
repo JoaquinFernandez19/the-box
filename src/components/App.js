@@ -4,15 +4,15 @@ import React from 'react';
 import '../styles/App.scss';
 //Components
 import Header from './Header';
-import TodoList from './TodoList';
+import Content from './Content';
 import Tools from './Tools';
 
 const App = () => {
 	return (
 		<div className="app-container">
 			<Header />
-
-			<TodoList />
+			
+			<Content />
 			<Tools />
 		</div>
 	);
