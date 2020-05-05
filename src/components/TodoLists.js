@@ -1,62 +1,74 @@
-import React, { useRef, useEffect } from 'react';
-import { BsPlus } from 'react-icons/bs';
+import React from 'react';
+
 import { connect } from 'react-redux';
-import { creatingNewTodo } from '../actions';
+
 //components
-import TodoForm from './TodoForm';
+
 import TaskItem from './TaskItem';
+import Doing from './columns/Doing';
+import Finished from './columns/Finished';
+import Pending from './columns/Pending';
 //
 import '../styles/todoLists.scss';
-//helper
 
 const TodoLists = (props) => {
-	const btnRef = useRef();
+	//drag and drop
 
-	const handleCreatingTodo = () => {
-		props.creatingNewTodo();
-	};
-
-	useEffect(() => {
-		if (props.creatingTodo) {
-			btnRef.current.style.display = 'none';
-		} else {
-			btnRef.current.style.display = 'flex';
+	const pendingList = props.taskList.map((task) => {
+		if (task.mode === 'pending') {
+			return (
+				<TaskItem
+					key={task.id}
+					id={task.id}
+					text={task.text}
+					mode={task.mode}
+				/>
+			);
 		}
-	}, [props.creatingTodo]);
+	});
 
-	const pendingList = props.pendingList.map((task) => {
-		return <TaskItem key={task.id} id={task.id} text={task.text} />;
+	const doingList = props.taskList.map((task) => {
+		if (task.mode === 'doing') {
+			return (
+				<TaskItem
+					key={task.id}
+					id={task.id}
+					text={task.text}
+					mode={task.mode}
+				/>
+			);
+		}
+	});
+	const finishedList = props.taskList.map((task) => {
+		if (task.mode === 'finished') {
+			return (
+				<TaskItem
+					key={task.id}
+					id={task.id}
+					text={task.text}
+					mode={task.mode}
+				/>
+			);
+		}
 	});
 
 	return (
 		<div className="content animated fadeIn">
-			<div className="toDo">
-				<h4>Pending Tasks</h4>
-				{pendingList}
+			<Pending> {pendingList}</Pending>
 
-				<div className="add-todo" onClick={handleCreatingTodo} ref={btnRef}>
-					<BsPlus className="add-todo-cion" />
-					<p>Add a pending task</p>
-				</div>
+			<Doing> {doingList}</Doing>
 
-				<TodoForm />
-			</div>
-
-			<div className="doing">
-				<h4>Working on it</h4>
-			</div>
-			<div className="finished">
-				<h4>Finished tasks</h4>
-			</div>
+			<Finished>{finishedList} </Finished>
 		</div>
 	);
 };
 
 const mapStateToProps = (state) => {
 	return {
-		creatingTodo: state.creatingTodo,
-		pendingList: state.pendingList,
+		taskList: state.taskList,
+		doingList: state.doingList,
+		finishedList: state.finishedList,
 	};
 };
 
-export default connect(mapStateToProps, { creatingNewTodo })(TodoLists);
+export default connect(mapStateToProps)(TodoLists);

@@ -22,20 +22,21 @@ export const creatingTodoReducer = (creatingTodo = false, action) => {
 };
 
 //Todolists!!!!!
-export const pendingTodoListReducer = (pendingList = [], action) => {
+export const pendingTodoListReducer = (taskList = [], action) => {
 	//creating a task
 	if (action.type === 'CREATE_TODO') {
-		const idCreator = pendingList.length;
+		const idCreator = taskList.length;
 		const task = {
 			id: idCreator,
 			text: action.payload.task,
+			mode: action.payload.mode,
 		};
-		return [...pendingList, task];
+		return [...taskList, task];
 	}
 
 	//deleting a task
 	if (action.type === 'DELETE_TODO') {
-		return pendingList.filter((task) => {
+		return taskList.filter((task) => {
 			if (task.id !== action.payload.taskId) {
 				return task;
 			} else {
@@ -44,16 +45,26 @@ export const pendingTodoListReducer = (pendingList = [], action) => {
 		});
 	}
 
-	if (action.type === 'RESET_PROJECT') {
-		pendingList = [];
+	if (action.type === 'CHANGE_MODE') {
+		return taskList.filter((task) => {
+			if (task.id === action.payload.id) {
+				task.mode = action.payload.mode;
+				return task;
+			}
+			return task;
+		});
 	}
 
-	return pendingList;
+	if (action.type === 'RESET_PROJECT') {
+		taskList = [];
+	}
+
+	return taskList;
 };
 
 //
 export default combineReducers({
 	working: workingStateReducer,
 	creatingTodo: creatingTodoReducer,
-	pendingList: pendingTodoListReducer,
+	taskList: pendingTodoListReducer,
 });

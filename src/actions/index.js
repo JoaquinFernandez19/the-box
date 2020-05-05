@@ -36,27 +36,21 @@ export const createTodo = (task) => {
 		type: 'CREATE_TODO',
 		payload: {
 			task: task,
+			mode: 'pending',
 		},
 	};
 };
 
-export const moveTodoToProgress = (task) => {
+export const changeMode = (id, mode) => {
 	return {
-		type: 'MOVE_TODO_PROGRESS',
+		type: 'CHANGE_MODE',
 		payload: {
-			task: task,
+			id: id,
+			mode: mode,
 		},
 	};
 };
 
-export const moveTodoToFinish = (task) => {
-	return {
-		type: 'MOVE_TODO_FINISH',
-		payload: {
-			task: task,
-		},
-	};
-};
 export const deleteTodo = (taskId) => {
 	return {
 		type: 'DELETE_TODO',

@@ -1,4 +1,6 @@
 import React from 'react';
+import { DndProvider } from 'react-dnd';
+import Backend from 'react-dnd-html5-backend';
 
 //style
 import '../styles/App.scss';
@@ -9,12 +11,14 @@ import Tools from './Tools';
 
 const App = () => {
 	return (
-		<div className="app-container">
-			<Header />
-			
-			<Content />
-			<Tools />
-		</div>
+		<DndProvider backend={Backend}>
+			<div className="app-container">
+				<Header />
+
+				<Content />
+				<Tools />
+			</div>
+		</DndProvider>
 	);
 };
 
