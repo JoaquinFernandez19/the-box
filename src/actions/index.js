@@ -59,11 +59,11 @@ export const deleteTodo = (taskId) => {
 		},
 	};
 };
-export const changeBackground = (newImg) => {
+export const changeBackground = (img) => {
 	return {
 		type: 'CHANGE_BACKGROUND',
 		payload: {
-			newImg: newImg,
+			img: img,
 		},
 	};
 };
@@ -75,11 +75,11 @@ export const changeFont = (fontSelected) => {
 		},
 	};
 };
-export const changeColor = (colorSelected) => {
+export const changeColor = (color) => {
 	return {
 		type: 'CHANGE_COLOR',
 		payload: {
-			colorSelected: colorSelected,
+			color: color,
 		},
 	};
 };

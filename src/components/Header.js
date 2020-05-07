@@ -15,7 +15,7 @@ const Header = (props) => {
 		return (
 			<div className="header">
 				<div className="new-project-btn active" onClick={handleStartProject}>
-					<p>Start</p>
+					<p>Working</p>
 					<FaTasks className="add-icon" />
 				</div>
 				<h2>The Box</h2>
@@ -34,7 +34,6 @@ const Header = (props) => {
 };
 
 const mapStateToProps = (state) => {
-	console.log(state);
 	return {
 		working: state.working,
 	};

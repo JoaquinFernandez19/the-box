@@ -19,14 +19,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		background-color: #2d767f;
-		color: white;
+		background-color: white;
+		color: black;
 		font-size: 1.4em;
 		transition: 200ms linear;
-		&:hover {
-			background-color: #ecfffb;
-			color: #1e6262;
-		}
+
 		.add-icon {
 			margin: 0px 0 0 5px;
 			font-size: 1em;
@@ -34,8 +31,8 @@
 		}
 	}
 	.active {
-		background-color: #ecfffb;
-		color: #1e6262;
+		background-color: black;
+		color: white;
 	}
 }
 
@@ -45,23 +42,15 @@
 		padding-right: 2em;
 		.new-project-btn {
 			position: relative;
-			top: 2px;
+			top: 3px;
 			left: 0;
 			padding: 0px 12px 2px 12px;
 			margin-bottom: 3px;
 			align-self: flex-end;
-			&:hover {
-				background-color: #b4f1f1;
-				color: black;
-			}
+
 			.add-icon {
 				margin: 2px 0 0 7px;
 			}
-		}
-		.active {
-			background-color: #b4f1f1;
-			color: black;
-			top: 3.5px;
 		}
 	}
 }

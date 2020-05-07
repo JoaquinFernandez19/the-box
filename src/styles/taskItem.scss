@@ -12,9 +12,9 @@
 	-webkit-box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.24);
 	-moz-box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.24);
 	box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.24);
-	transition: 0.3s !important;
 	.hiden-delete {
 		position: absolute;
+		cursor: pointer;
 		right: 0;
 		top: 0;
 		max-width: 0%;
@@ -27,7 +27,6 @@
 		justify-content: center;
 		border-radius: 0 5px 5px 0;
 		pointer-events: all;
-
 		.icon {
 			color: white;
 			pointer-events: none;
@@ -56,5 +55,6 @@
 	.task-item {
 		min-width: none;
 		max-width: 100%;
+		font-size: 1em;
 	}
 }

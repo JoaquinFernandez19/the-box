@@ -62,8 +62,31 @@ export const pendingTodoListReducer = (taskList = [], action) => {
 	return taskList;
 };
 
+export const backgroundReducer = (img = 'default', action) => {
+	if (action.type === 'CHANGE_BACKGROUND') {
+		return (img = action.payload.img);
+	}
+	return img;
+};
+
+export const fontReducer = (font = 'Roboto', action) => {
+	if (action.type === 'CHANGE_FONT') {
+		return (font = action.payload.fontSelected);
+	}
+	return font;
+};
+export const colorReducer = (color = 'default', action) => {
+	if (action.type === 'CHANGE_COLOR') {
+		return (color = action.payload.color);
+	}
+	return color;
+};
+
 //
 export default combineReducers({
+	color: colorReducer,
+	font: fontReducer,
+	background: backgroundReducer,
 	working: workingStateReducer,
 	creatingTodo: creatingTodoReducer,
 	taskList: pendingTodoListReducer,
