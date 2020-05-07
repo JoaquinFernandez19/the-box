@@ -1,7 +1,7 @@
 ## The box
 
 The box is an task manager very customizable and super responsive.
-You can drag your task from one column to another, change background and theme, and also change the font! everything being saved on your localStorage.
+You can drag your tasks from one column to another, change background and theme, and also change the font! everything being saved on your localStorage.
 
 ### Tech used
 
