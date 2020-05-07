@@ -5,12 +5,12 @@ You can drag your tasks from one column to another, change background and theme,
 
 ### Tech used
 
-React.js
-Redux
-Sass
-LocalStorage
-React dnd
-React icons
+React.js,
+Redux,
+Sass,
+LocalStorage,
+React dnd,
+React icons,
 Animate css library
 
 ## Details
